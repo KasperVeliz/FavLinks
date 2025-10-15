@@ -32,14 +32,10 @@ const TableBody = (props) => {
 
 function Table(props){
 
-    const removeLink = (index) => {
-        props.removeLink({index})
-    }
-
     return(
         <table>
             <TableHeader/>
-            <TableBody linkData={props.linkData} removeLink={removeLink}/>
+            <TableBody linkData={props.linkData} removeLink={props.removeLink}/>
         </table>
     )
 }
